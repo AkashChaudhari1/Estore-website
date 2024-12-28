@@ -112,7 +112,7 @@ intuitive interface and robust backend functionalities.
 <ul>
   <li>
     Login page:   
-    ![image alt](https://github.com/AkashChaudhari1/Estore-website/blob/181f827e46e819605ee73866fb9704108e23d14f/login.png)
+    ![image alt](https://github.com/AkashChaudhari1/Estore-website/blob/181f827e46e819605ee73866fb9704108e23d14f/login.png?raw=true)
   </li>
 </ul>
 <hr>
