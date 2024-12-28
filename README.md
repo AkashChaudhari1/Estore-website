@@ -42,3 +42,57 @@ intuitive interface and robust backend functionalities.
   </li>
 </ol>
 <hr>
+<h4>🖥 Installation Instructions</h4>
+<b>Prerequisites</b>
+<ul>
+  <li>
+    Java 17 or later
+  </li>
+  <li>
+    MySQL Server
+  </li>
+  <li>
+    Maven
+  </li>
+</ul>
+<b>Steps to Run Locally</b>
+<ul>
+  <li>  
+    Clone the repository:<br>
+    
+    ```
+    git clone 
+    ```
+  </li>
+  <li>  
+  </li>
+  <li>  
+  </li>
+  <li>  
+  </li>
+  <li>  
+  </li>
+  <li>  
+  </li>
+</ul>
+
+Navigate to the project directory:
+
+bash
+Copy code
+cd e-store  
+Configure the database:
+
+Create a MySQL database named estore_db.
+Update the database credentials in application.properties.
+Build the project:
+
+bash
+Copy code
+mvn clean install  
+Run the application:
+
+bash
+Copy code
+mvn spring-boot:run  
+Access the application in your browser at http://localhost:8080.
