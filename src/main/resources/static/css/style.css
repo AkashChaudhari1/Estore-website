@@ -11,3 +11,14 @@
 .error{
 	color: red;
 }
+
+.custom-text {
+  font-size: 1.2rem; /* Slightly larger text */
+  font-weight: bold; /* Makes the text bold */
+  color: #333; /* Slightly softer dark color */
+  text-transform: capitalize; /* Capitalizes the first letter of each word */
+  letter-spacing: 1px; /* Adds spacing between letters */
+  margin: 10px 0; /* Adds spacing around the text */
+  text-align: center; /* Centers the text */
+  transition: color 0.3s ease; /* Smooth color change on hover */
+}

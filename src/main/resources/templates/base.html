@@ -21,14 +21,15 @@
 	<nav class="navbar navbar-expand-lg bg-dark fixed-top navbar-dark">
 		<div class="container-fluid">
 			<th:block th:if="${user==null}">
-			<a class="navbar-brand" href="/"><i class="fa-solid fa-store"></i>
-				E-Store</a>
+				<a class="navbar-brand" href="/"><i class="fa-solid fa-store"></i>
+					E-Store</a>
 			</th:block>
 			<th:block th:unless="${user==null}">
-			<a class="navbar-brand" href="/" th:if="${user.role=='ROLE_USER'}"><i class="fa-solid fa-store"></i>
-				E-Store</a>
-			<a class="navbar-brand" href="/admin/" th:if="${user.role=='ROLE_ADMIN'}"><i class="fa-solid fa-store"></i>
-				E-Store</a>
+				<a class="navbar-brand" href="/" th:if="${user.role=='ROLE_USER'}"><i
+					class="fa-solid fa-store"></i> E-Store</a>
+				<a class="navbar-brand" href="/admin/"
+					th:if="${user.role=='ROLE_ADMIN'}"><i class="fa-solid fa-store"></i>
+					E-Store</a>
 			</th:block>
 			<button class="navbar-toggler" type="button"
 				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -64,22 +65,27 @@
 								class="fa-solid fa-arrow-right-to-bracket"></i> REGISTER</a></li>
 					</th:block>
 					<th:block th:if="${user!=null}">
-					<th:block th:if="${user.role=='ROLE_USER'}">
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/user/cart"><i
-								class="fa-solid fa-cart-arrow-down"></i> Cart [ [[${countCart}]] ]</a></li>
-					</th:block>
+						<th:block th:if="${user.role=='ROLE_USER'}">
+							<li class="nav-item"><a class="nav-link active"
+								aria-current="page" href="/user/cart"><i
+									class="fa-solid fa-cart-arrow-down"></i> Cart [
+									[[${countCart}]] ]</a></li>
+						</th:block>
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle active" href="#" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false"> <i
 								class="fa-solid fa-circle-user"></i> [[${user.name}]]
 						</a>
 							<ul class="dropdown-menu">
-								<li th:if="${user.role=='ROLE_USER'}"><a class="dropdown-item" href="/user/profile">Profile</a></li>								
-								<li th:if="${user.role=='ROLE_ADMIN'}"><a class="dropdown-item" href="/admin/profile">Profile</a></li>								
-								<li th:if="${user.role=='ROLE_USER'}"><a class="dropdown-item" href="/user/user-orders">My Orders</a></li>
+								<li th:if="${user.role=='ROLE_USER'}"><a
+									class="dropdown-item" href="/user/profile">Profile</a></li>
+								<li th:if="${user.role=='ROLE_ADMIN'}"><a
+									class="dropdown-item" href="/admin/profile">Profile</a></li>
+								<li th:if="${user.role=='ROLE_USER'}"><a
+									class="dropdown-item" href="/user/user-orders">My Orders</a></li>
 								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="/logout"><i class="fa-solid fa-arrow-right-from-bracket p-1"></i>Logout</a></li>
+								<li><a class="dropdown-item" href="/logout"><i
+										class="fa-solid fa-arrow-right-from-bracket p-1"></i>Logout</a></li>
 							</ul></li>
 						<!-- <li class="nav-item"><a class="nav-link active"
 							aria-current="page" href="/logout"><i
@@ -92,14 +98,53 @@
 	<!-- End Navbar -->
 	<div th:replace="${content}"></div>
 	<!-- Start Footer -->
-	<div class="container-fluid p-1 bg-dark text center"
+	<!-- 	<div class="container-fluid p-1 bg-dark text center"
 		style="margin-top: 200px">
 		<p align="center" style="color: white;">estore.com</p>
-	</div>
+	</div> -->
+	<footer class="container-fluid p-4 bg-dark text-center"
+		style="margin-top: 200px; border-top: 2px solid #007bff;">
+		<div
+			style="color: white; font-size: 1.2rem; font-weight: bold; margin-bottom: 15px;">
+			&copy; 2024 <a href="/"
+				style="color: #007bff; text-decoration: none;">estore.com</a> | All
+			Rights Reserved
+		</div>
+
+		<div
+			style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px; flex-wrap: wrap;">
+			<a href="#" style="color: white; text-decoration: none;">About Us</a>
+			<a href="#" style="color: white; text-decoration: none;">Contact</a>
+			<a href="#" style="color: white; text-decoration: none;">Privacy
+				Policy</a> <a href="#" style="color: white; text-decoration: none;">Terms
+				of Service</a> <a href="#" style="color: white; text-decoration: none;">FAQs</a>
+		</div>
+
+		<div style="color: #bbb; font-size: 0.9rem; margin-bottom: 15px;">
+			Need help? Email us at <a href="#"
+				style="color: #007bff; text-decoration: none;">support@estore.com</a>
+		</div>
+
+		<div style="margin-bottom: 15px;">
+			<a href="#" style="margin: 0 10px; color: white;"><i
+				class="fab fa-facebook-f"></i></a> <a href="#"
+				style="margin: 0 10px; color: white;"><i class="fab fa-twitter"></i></a>
+			<a href="#" style="margin: 0 10px; color: white;"><i
+				class="fab fa-instagram"></i></a> <a href="#"
+				style="margin: 0 10px; color: white;"><i
+				class="fab fa-linkedin-in"></i></a>
+		</div>
+
+		<div style="color: #777; font-size: 0.8rem;">Designed with ❤️ by
+			Akash Chaudhari</div>
+	</footer>
+
 	<!-- End Footer -->
 	<!-- Jquery Validation library-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="../js/script.js"></script>
 	<!-- End -->
