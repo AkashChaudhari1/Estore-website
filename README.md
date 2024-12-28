@@ -107,14 +107,5 @@ intuitive interface and robust backend functionalities.
   </li>
 </ul>
 <hr>
-<h4>📸 Screenshots</h4>
-![login](https://github.com/user-attachments/assets/768e4a5b-264b-414b-b093-be522057c4de)
-<ul>
-  <li>
-    Login page:   
-    
-  </li>
-</ul>
-<hr>
 <h4>📧 Contact</h4>
 For queries or feedback, reach out at: chaudhariakash274@gmail.com
