@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<!-- Start Slider -->
+		<br> <br>
+		<div id="carouselExample" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/lap.jpg" class="d-block w-100" alt="lap"
+						height="500px">
+				</div>
+				<div class="carousel-item">
+					<img src="img/mob.jpg" class="d-block w-100" alt="phone"
+						height="500px">
+				</div>
+				<div class="carousel-item">
+					<img src="img/cloth.jpg" class="d-block w-100" alt="cloth"
+						height="500px">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button"
+				data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button"
+				data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		<!-- End Slider -->
+		<!-- Start Category Module -->
+		<p class="text-center fs-4 bg-dark" style="color: white;">CATEGORY</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2" th:each="c:${category}">
+					<a th:href="@{'/products?category='+${c.name}}" class="text-decoration-none">
+						<div class="img-thumbnail shadow p-3 mb-5 bg-body-tertiary rounded">
+							<div class="card-body text-center">
+								<img th:src="@{'img/category/'+${c.imageName}}" width="100%"
+									height="150px">
+								<p class="text-dark">[[${c.name}]]</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<!-- <div class="col-md-2">
+					<div class="img-thumbnail shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/category/beauty.jpg" alt="Beauty" width="100%"
+								height="150px">
+							<p>Beauty</p>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-md-2">
+					<div class="img-thumbnail shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/category/clothes.jpg" alt="Clothes" width="100%"
+								height="150px">
+							<p>Clothes</p>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-md-2">
+					<div class="img-thumbnail shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/category/lap.jpg" alt="Laptop" width="100%"
+								height="150px">
+							<p>Laptops</p>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-md-2">
+					<div class="img-thumbnail shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/category/phone.jpg" alt="SmartPhone" width="100%"
+								height="150px">
+							<p>Smart Phones</p>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="col-md-2">
+					<div class="img-thumbnail shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<img src="img/category/groc.jpg" alt="Grocery" width="100%"
+								height="150px">
+							<p>Grocery</p>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<!-- End Category Module -->
+
+		<!-- Start Latest Product Module -->
+		<p class="text-center fs-4 bg-dark" style="color: white;">Latest
+			Product</p>
+		<div class="container-fluid bg-light p-3">
+			<div class="row">
+				<div class="col-md-3" th:each="p:${products}">
+					<a th:href="@{'/product/'+${p.id}}" class="text-decoration-none">
+						<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+							<div class="card-body text center">
+								<img alt="Iphone" th:src="@{'img/product/'+${p.image}}" class=""
+									width="100%" height="100%">
+								<P class="text-center">[[${p.title}]]</P>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<!-- <div class="col-md-3">
+					<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text center">
+							<img alt="Iphone" src="img/product/Iphone16.jpg" class=""
+								width="100%" height="200px">
+							<P class="text-center">IPhone 16</P>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text center">
+							<img alt="Iphone" src="img/product/Iphone16.jpg" class=""
+								width="100%" height="200px">
+							<P class="text-center">IPhone 16</P>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3">
+					<div class="card shadow p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text center">
+							<img alt="Iphone" src="img/product/Iphone16.jpg" class=""
+								width="100%" height="200px">
+							<P class="text-center">IPhone 16</P>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+		<!-- End Latest Product Module -->
+	</section>
+</body>
+</html>
