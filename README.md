@@ -107,14 +107,5 @@ intuitive interface and robust backend functionalities.
   </li>
 </ul>
 <hr>
-<h4>📸 Screenshots</h4>
-![image alt](https://github.com/AkashChaudhari1/Estore-website/blob/c9424fbaad7c1312bf75377f0682c5ad1f835f02/src/main/resources/static/screenshots/login.png)
-<ul>
-  <li>
-    Login page:   
-    
-  </li>
-</ul>
-<hr>
 <h4>📧 Contact</h4>
 For queries or feedback, reach out at: chaudhariakash274@gmail.com
