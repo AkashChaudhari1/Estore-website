@@ -1,4 +1,4 @@
-<h1><b>E-store: An E-commerce Website</b><i class="fa-solid fa-cart-shopping"></i></h1> 
+<h1><b>E-store: An E-commerce Website 🛍️</b></i></h1> 
 <h4>📖 Description</h4>
 E-store is a full-stack e-commerce web application designed for seamless online shopping experiences. 
 It provides users with essential features to browse, select, and purchase products while offering an 
@@ -56,43 +56,58 @@ intuitive interface and robust backend functionalities.
   </li>
 </ul>
 <b>Steps to Run Locally</b>
-<ul>
+<ol>
   <li>  
-    Clone the repository:<br>
+    Clone the repository: 
     
-    ```
-    git clone 
-    ```
+    git clone https://github.com/AkashChaudhari1/Estore-website.git
+    
   </li>
   <li>  
+    Navigate to the project directory:
+    
+    cd e-store
+    
   </li>
   <li>  
+    Configure the database:
+    <ul>
+      <li>
+        Create a MySQL database named estore_db.
+      </li>
+      <li>
+        Update the database credentials in application.properties.
+      </li>
+    </ul>
   </li>
   <li>  
+    Build the project:
+    
+    mvn clean install  
+    
   </li>
   <li>  
+    Run the application:
+    
+    mvn spring-boot:run  
+    
   </li>
   <li>  
+    Access the application in your browser at http://localhost:8080.
+  </li>
+</ol>
+<hr>
+<h4>🚀 Usage</h4>
+<ul>
+  <li>
+    Admin Role: Log in to manage products and view orders.
+  </li>
+  <li>
+    User Role: Register or log in to browse, add products to the cart, and place orders
   </li>
 </ul>
-
-Navigate to the project directory:
-
-bash
-Copy code
-cd e-store  
-Configure the database:
-
-Create a MySQL database named estore_db.
-Update the database credentials in application.properties.
-Build the project:
-
-bash
-Copy code
-mvn clean install  
-Run the application:
-
-bash
-Copy code
-mvn spring-boot:run  
-Access the application in your browser at http://localhost:8080.
+<hr>
+<h4>📸 Screenshots</h4>
+<hr>
+<h4>📧 Contact</h4>
+For queries or feedback, reach out at: chaudhariakash274@gmail.com
